@@ -1,14 +1,16 @@
-var fortunes = ['Excellent!!','Good', 'Surprise!', 'Oh! NO!']
+
 var express = require('express');
 
 var app = express();
 
 app.set('view engine', 'jade');
-
 app.set('port', process.env.PORT || 3000);
-
 app.use(express.static(__dirname + '/public'));
 
+
+// ==================================================================
+// Router
+// ==================================================================
 app.get('/', function(req, res){
   // res.type('text/plain');
   // res.send('Meadowlark Travel');
@@ -16,6 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
+  var fortunes = ['Excellent!!','Good', 'Surprise!', 'Oh! NO!']
   var randomFortune = fortunes[ Math.floor(Math.random()*fortunes.length) ];
   res.render('about', {fortune: randomFortune});
 });
