@@ -1,17 +1,17 @@
 // 'use strict';
-// var component = require('./component.jsx');
 
-
-// document.body.appendChild(component());
-
+// ES6
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Hello from './component.jsx';
+
+// Common JS
 // var React = require('react');
 // var ReactDOM = require('react-dom');
-// require('./component.jsx');
+// var Hello = require('./component.jsx');
 
 main();
 
 function main() {
-    ReactDOM.render(<Hello />, document.getElementById('app'));
+    ReactDOM.render(<Hello name={"React World"}/>, document.getElementById('app'));
 }

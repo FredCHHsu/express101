@@ -41,18 +41,10 @@ var config = {
     },
     module: {
         loaders: [
-        // {
-        //     test: /\.jsx?$/,
-        //     loaders: ['babel-loader']
-        // },
         { 
             test: /\.jsx?$/,
             exclude: /node_modules/, 
-            loaders: ['babel-loader'],
-            // query:
-            // {
-            //     presets:['react']
-            // }
+            loaders: ['babel'],
         }
         ]
     }
