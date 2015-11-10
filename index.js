@@ -1,4 +1,4 @@
-var fortunes = ['Excellent!!','Good', 'Surprise!', 'Oh! NO!']
+var fortune = require('./lib/fortune.js');
 var express = require('express');
 
 var app = express();
@@ -14,8 +14,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-  var randomFortune = fortunes[ Math.floor(Math.random()*fortunes.length) ];
-  res.render('about', {fortune: randomFortune});
+  res.render('about', {fortune: fortune.getFortune()});
 });
 
 app.use(function(req, res, next){
