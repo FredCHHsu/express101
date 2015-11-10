@@ -6,16 +6,16 @@ var url = require('url');
 
 module.exports = function(app) {
 
-  app.use('/assets', proxy(url.parse('http://localhost:8081/assets')));
+    app.use('/assets', proxy(url.parse('http://localhost:8081/assets')));
 
-  var server = new WebpackDevServer(webpack(config), {
-    contentBase: __dirname,
-    hot: true,
-    quiet: false,
-    noInfo: false,
-    publicPath: '/assets/',
-    stats: { colors: true }
-  }).listen(8081, 'localhost', function() {
-    console.log('dev server listen 8081')
-  });
+    var server = new WebpackDevServer(webpack(config), {
+        contentBase: __dirname,
+        hot: true,
+        quiet: false,
+        noInfo: false,
+        publicPath: '/assets/',
+        stats: { colors: true }
+    }).listen(8081, 'localhost', function() {
+        console.log('dev server listen 8081')
+    });
 }
