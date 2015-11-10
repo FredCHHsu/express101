@@ -13,5 +13,5 @@ import Hello from './component.jsx';
 main();
 
 function main() {
-    ReactDOM.render(<Hello name={"React Scucess Yeah"}/>, document.getElementById('app'));
+    ReactDOM.render(<Hello name={"React Success"}/>, document.getElementById('app'));
 }

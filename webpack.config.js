@@ -15,7 +15,7 @@ var config = {
         loaders: [{
             test: /\.jsx?$/,
             exclude: [node_modules_dir],
-            loaders: ['babel-loader']
+            loaders: ['react-hot-loader', 'babel-loader']
         }]
     },
     resolve: {
